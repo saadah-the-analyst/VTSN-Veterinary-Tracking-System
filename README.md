@@ -225,7 +225,7 @@ The final file from this step is `step4_numpy_analyzed_data.csv`.
 
 **Screenshot of Step 4 (Code):**
 
-![Step 4 - NumPy Analysis](Numpy%20Analysis.png)
+![Step 4 - NumPy Analysis](NumPy%20Analysis.png)
 
 ---
 
