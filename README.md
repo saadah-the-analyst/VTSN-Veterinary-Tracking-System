@@ -28,7 +28,6 @@
 12. [How to Set Up and Run the Project](#12-how-to-set-up-and-run-the-project)
 13. [Project Deliverables Checklist](#13-project-deliverables-checklist)
 14. [Final Conclusion](#14-final-conclusion)
-15. [License and Credits](#15-license-and-credits)
 
 ---
 
