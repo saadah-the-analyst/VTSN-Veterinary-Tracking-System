@@ -137,7 +137,10 @@ The project follows a clear 7-step process. Each step is explained below.
 
 In the first step we started with the full raw dataset called `veterinary_clinical_data.csv`. This file contained **10,000 rows** and **10 columns** (AnimalName, Breed, Age, Weight_kg, MedicalHistory, and five symptom columns).
 
-Because we needed a clean and manageable working set, we used Python to extract only the first **1,000 authentic rows**. We saved this subset as `authentic_veterinary_data.csv`. This became the official working dataset for all the remaining steps.
+However, only the first 1,000 rows are **authentic** (real clinic records). The remaining 9,000 rows are **synthetic** (artificially generated data).
+
+For this important reason, we deliberately extracted only the first 1,000 authentic rows using Python. We saved this clean and reliable subset as `authentic_veterinary_data.csv`. This authentic dataset became the official working data for all the remaining steps of the project.
+
 
 **Result of Step 1:** A reliable file with exactly 1,000 rows and 10 columns ready for cleaning.
 
@@ -153,11 +156,10 @@ Because we needed a clean and manageable working set, we used Python to extract 
 
 In Step 2 we loaded the authentic dataset and performed careful cleaning:
 
-- Checked for missing values → **None found**
-- Checked for duplicate rows → **None found**
-- Standardised text columns (AnimalName, Breed, MedicalHistory) by removing extra spaces and fixing capitalisation
-- Converted Age and Weight_kg into proper numerical (float) format
-- Generated summary statistics to confirm that the numbers were realistic for clinical data
+* **Missing Value Audit:** Performed comprehensive null-value scans (`df.isnull().sum()`), confirming **0 missing values** across all records.
+* **Duplicate Elimination:** Scanned for identical record duplication (`df.duplicated().sum()`), verifying **0 duplicate rows** and ensuring statistical independence.
+* **Text & String Standardization:** Standardized categorical text columns (`AnimalName`, `Breed`, `MedicalHistory`) by stripping invisible whitespace buffers and enforcing uniform title case formatting (e.g., converting lowercase `'cat'` to `'Cat'`).
+* **Datatype Conversion:** Cast numerical features (`Age` and `Weight_kg`) into precise floating-point representations (`float64`) and generated descriptive statistical summaries to eliminate anomalous outliers.
 
 After cleaning, the dataset was saved as `cleaned_authentic_veterinary_data.csv`. It still had 1,000 rows and 10 columns, but now it was clean and ready for transformation.
 
@@ -173,23 +175,22 @@ After cleaning, the dataset was saved as `cleaned_authentic_veterinary_data.csv`
 
 This step used pure Python programming skills (functions, if-elif-else statements, and loops) to create new useful columns.
 
-**Age Group Classification**
-- Young → animals under 3 years old
-- Adult → animals between 3 and 10 years old
-- Senior → animals older than 10 years
-
-**Weight Class Classification**
-- Small Breed → under 10 kg
-- Medium Breed → 10 kg to 25 kg
-- Large Breed → over 25 kg
-
-**Health Risk Level**
-- High Risk → medical history contains words like “chronic”, “kidney” or “heart”
-- Low Risk → medical history contains the word “vaccinated”
-- Moderate Risk → all other cases
-
-**Symptom Processing**  
-We also counted how many symptoms each patient had, flagged patients who had fever, and classified overall symptom severity into Mild, Moderate, or Severe.
+1. **Patient Age Demographics (`Age_Group`):**
+   * *Young:* Patients $< 3$ years of age.
+   * *Adult:* Patients between $3$ and $10$ years of age.
+   * *Senior:* Patients $> 10$ years of age.
+2. **Body Weight Classifications (`Weight_Class`):**
+   * *Small Breed:* Animals weighing $< 10	ext{ kg}$.
+   * *Medium Breed:* Animals weighing between $10	ext{ kg}$ and $25	ext{ kg}$.
+   * *Large Breed:* Animals weighing $> 25	ext{ kg}$.
+3. **Clinical Health Risk Stratification (`Health_Risk_Level`):**
+   * *High Risk:* Flagged automatically for chronic conditions, history of renal impairment, or cardiac disorders.
+   * *Low Risk:* Assigned to patients with verified, up-to-date vaccination records.
+   * *Moderate Risk:* Applied to standard routine checkups, parasite treatments, or minor surgical histories.
+4. **Symptom Processing & Iterative Looping:**
+   * **Symptom Frequency Tallying:** Iterated through all five symptom tracking columns using dictionary mapping to aggregate and count distinct clinical occurrences (**801 unique symptom instances** cataloged).
+   * **Critical Symptom Flagging (`Has_Fever_Flag`):** Executed conditional row scans to isolate fever presentations (`Yes` / `No`).
+   * **Symptom Severity Load (`Symptom_Severity_Level`):** Categorized overall clinical burden based on symptom counts (*Mild*, *Moderate*, *Severe*).
 
 After these transformations the dataset grew to **16 columns** and was saved as `structured_authentic_veterinary_data.csv`.
 
@@ -282,9 +283,9 @@ After analysing 1,000 authentic patient records, these are the main findings:
 - Small and Medium breeds form the majority of daily visits.
 
 ### Health Risk Findings
-- Most patients fall into the **Moderate Risk** category.
-- High Risk patients are the next largest group.
-- Low Risk patients are the smallest group.
+- Most patients fall into the **Moderate Risk** category, which are (600) patients.
+- High Risk patients are the next largest group, which are (236) patients.
+- Low Risk patients are the smallest group, .
 
 ### Symptom Findings
 - **Fever** and **Weight Loss** are the two most common clinical signs.
@@ -341,7 +342,6 @@ This project is a solid foundation. There are many ways it can be improved and e
 ### Short-Term Improvements
 - Collect more than 1,000 records so that the analysis becomes even more reliable.
 - Add more details such as breed type, sex of the animal, vaccination dates, and treatment outcomes.
-- Create a simple user interface (for example with Streamlit or Gradio) so that clinic staff who do not know Python can still use the system.
 
 ### Medium-Term Improvements
 - Build a proper database (SQLite or PostgreSQL) instead of using only CSV files.
