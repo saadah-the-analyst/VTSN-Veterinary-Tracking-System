@@ -390,7 +390,7 @@ At the end of the project the following items have been successfully completed:
 - [x] Structured dataset with Age Group, Weight Class, Health Risk Level and Symptom Severity columns
 - [x] NumPy statistical calculations for Age and Weight
 - [x] Complete set of 7 professional charts saved as a high-resolution PNG file
-- [x] Detailed written interpretation of the results
+- [x] Written interpretation of the results
 - [x] Clear recommendations for veterinary clinics
 - [x] Future development suggestions
 - [x] Full documentation (this README and the Jupyter Notebook)
@@ -417,5 +417,3 @@ Nnadiukwu Glory Vivian
 **Project Type:** Python Data Analytics Course Project
 
 ---
-
-*End of Documentation*
