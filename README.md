@@ -13,7 +13,7 @@
 4. [Team Members](#4-team-members)
 5. [Technologies Used](#5-technologies-used)
 6. [Recommended GitHub Folder Structure](#6-recommended-github-folder-structure)
-7. [Detailed Step-by-Step Methodology](#7-detailed-step-by-step-methodology)
+7. [Step-by-Step Methodology](#7-step-by-step-methodology)
    - 7.1 Step 1 – Data Collection & Original Dataset Isolation
    - 7.2 Step 2 – Data Cleaning and Preprocessing (Pandas)
    - 7.3 Step 3 – Data Transformation and Structuring (Python Fundamentals)
@@ -34,7 +34,7 @@
 
 ## 1. Project Overview and Introduction
 
-This document is a complete and detailed guide for the **VTSN (Veterinary Tracking System Nigeria)** project. It is written in simple English so that anyone — students, lecturers, veterinary doctors, or GitHub visitors — can easily understand what the project is about and how it works.
+This document is a complete and detailed guide for the **VTSN (Veterinary Tracking System Nigeria)** project. It is written in simple English so that anyone — students, lecturers, veterinary doctors, or GitHub visitors can easily understand what the project is about and how it works.
 
 The full name of the project is: **Veterinary Clinic Patient Record and Sickness Frequency Analyzer**. It is also called **VTSN – Animal Disease Outbreak & Surveillance Tracker**.
 
@@ -114,7 +114,7 @@ VTSN-Veterinary-Tracking-System/
 ├── notebooks/
 │   └── Vet_Clinic_Analysis_Project.ipynb
 │
-├── images/                          ← Put all your screenshots here
+├── images/                          
 │   ├── step1_data_collection.png
 │   ├── step2_data_cleaning.png
 │   ├── step3_data_transformation.png
@@ -130,9 +130,9 @@ VTSN-Veterinary-Tracking-System/
 
 ---
 
-## 7. Detailed Step-by-Step Methodology
+## 7. Step-by-Step Methodology
 
-The project follows a clear 7-step process. Each step is explained below in simple English.
+The project follows a clear 7-step process. Each step is explained below.
 
 ### 7.1 Step 1 – Data Collection & Original Dataset Isolation
 
@@ -409,12 +409,6 @@ We hope this project encourages more clinics in Nigeria to start using simple da
 Thank you for reading this complete documentation.
 
 ---
-
-## 15. License and Credits
-
-This project is open source. You are free to use, share, and improve it.
-
-**Suggested license:** MIT License
 
 **Project created by:**  
 Muhyideen Saadah Aduke  
