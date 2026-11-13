@@ -1,5 +1,3 @@
-# VTSN-Veterinary-Tracking-System
-
 # VTSN – Veterinary Tracking System Nigeria
 ### Animal Disease Outbreak & Surveillance Tracker
 
