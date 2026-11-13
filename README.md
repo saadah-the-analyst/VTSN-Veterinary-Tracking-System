@@ -146,7 +146,7 @@ For this important reason, we deliberately extracted only the first 1,000 authen
 
 **Screenshot of Step 1 (Code):**
 
-![Step 1 - Data Collection](images/step1_data_collection.png)
+![Step 1 - Data Collection](Data_Collection.png)
 
 *(Replace the image above with your actual screenshot of the Step 1 code)*
 
