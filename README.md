@@ -148,8 +148,6 @@ For this important reason, we deliberately extracted only the first 1,000 authen
 
 ![Step 1 - Data Collection](Data%20Collection.png)
 
-*(Replace the image above with your actual screenshot of the Step 1 code)*
-
 ---
 
 ### 7.2 Step 2 – Data Cleaning and Preprocessing (Pandas)
@@ -165,9 +163,7 @@ After cleaning, the dataset was saved as `cleaned_authentic_veterinary_data.csv`
 
 **Screenshot of Step 2 (Code):**
 
-![Step 2 - Data Cleaning](images/step2_data_cleaning.png)
-
-*(Replace the image above with your actual screenshot of the Step 2 code)*
+![Step 2 - Data Cleaning](Data%20Cleaning.png)
 
 ---
 
@@ -196,9 +192,7 @@ After these transformations the dataset grew to **16 columns** and was saved as 
 
 **Screenshot of Step 3 (Code):**
 
-![Step 3 - Data Transformation](images/step3_data_transformation.png)
-
-*(Replace the image above with your actual screenshot of the Step 3 code)*
+![Step 3 - Data Transformation](Data%20Transformation.png)
 
 ---
 
@@ -231,9 +225,7 @@ The final file from this step is `step4_numpy_analyzed_data.csv`.
 
 **Screenshot of Step 4 (Code):**
 
-![Step 4 - NumPy Analysis](images/step4_numpy_analysis.png)
-
-*(Replace the image above with your actual screenshot of the Step 4 code)*
+![Step 4 - NumPy Analysis](Numpy%20Analysis.png)
 
 ---
 
@@ -253,9 +245,10 @@ All charts were saved together as one high-resolution image file named `veterina
 
 **Screenshot of Step 5 (Code):**
 
-![Step 5 - Data Visualization](images/step5_visualization.png)
+![Step 5 - Data Visualization](Data%20Visualization.png)
 
-*(Replace the image above with your actual screenshot of the Step 5 code)*
+
+![Step 5 - Data Visualization](Data%20Visualization2.png)
 
 ---
 
